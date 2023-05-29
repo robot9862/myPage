@@ -1,0 +1,67 @@
+
+#main_body{
+    margin : 0 auto;
+    width: 70%;
+}
+#profile_body > *{
+    display:inline-block;
+}
+#my_img{
+    width:30%;
+    
+}
+#profile_box{
+    width: 50%;
+    position: absolute;
+}
+
+#nav_content{
+    display: block;
+}
+#menu_body{
+    display: inline-block;
+    
+    width: 100%;
+}
+#main_title{
+    display: inline-block;
+    margin : 5%;
+}
+#menu_body button{
+   display: none;
+}
+#navMenu{
+    
+    float: right;
+    margin : 5%;
+}
+#navMenu_index{
+    display: inline-block;
+}
+#navMenu *{
+    display: inline-block;
+}
+
+
+#book_body{
+  
+    width: 100%;
+}
+.book{
+    width: 100%;
+}
+.book_info_img{
+    width: 30%;
+}
+
+.book_info_box{
+    position: absolute;
+    top:1;
+    margin-left: 5%;
+    width: 64%;
+    display: inline-block;
+}
+.book_info_box a{
+    text-decoration: none;
+    color:brown;
+}

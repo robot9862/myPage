@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+
+    <title>SeungHo's Wep Page</title>
+    <link href="./main.css" rel="stylesheet" media="screen and (min-width: 768px)">
+    <link href="./main_mobile.css" rel="stylesheet" media="screen and (max-width: 767px)">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+        function navButton() {
+
+            var flag = $('#navMenu').attr('class');
+            if (flag == 'off') {
+
+                $("#navMenu").animate({
+                    height: 250
+                }, 500);
+                $('#navMenu').attr('class', 'on');
+            }
+
+            else {
+
+                $("#navMenu").animate({
+                    height: 0
+                }, 500);
+                $('#navMenu').attr('class', 'off');
+
+            }
+
+        }
+
+        function linking(to) {
+            $('#main').click(function () {
+                console.log("main");
+                $('#profile_body').css('display', '');
+                $('#book_body').css('display', 'none');
+                $('#research_body').css('display', 'none');
+                $('#main_body').attr('class', 'main_on');
+                $(this).css('fontWeight', 'bold')
+                $('#book').css('fontWeight', '');
+                $('#research').css('fontWeight', '');
+                if ($('menu_body').attr('width') <= 767)
+                    $("#navMenu").animate({
+                        height: 0
+                    }, 500);
+                $('#navMenu').attr('class', 'off');
+            });
+
+
+            $('#book').click(function () {
+                console.log("book");
+                $('#book_body').css('display', '');
+                $('#profile_body').css('display', 'none');
+                $('#research_body').css('display', 'none');
+                $('#main_body').attr('class', 'book_on');
+                $(this).css('fontWeight', 'bold');
+                $('#main').css('fontWeight', '');
+                $('#research').css('fontWeight', '');
+                if ($('menu_body').attr('width') <= 767)
+                    $("#navMenu").animate({
+                        height: 0
+                    }, 500);
+                $('#navMenu').attr('class', 'off');
+            });
+
+            $('#research').click(function () {
+                console.log("research");
+                $('#research_body').css('display', '');
+                $('#book_body').css('display', 'none');
+                $('#profile_body').css('display', 'none');
+                $('#main_body').attr('class', 'research_on');
+                $(this).css('fontWeight', 'bold');
+                $('#main').css('fontWeight', '');
+                $('#book').css('fontWeight', '');
+                if ($('menu_body').attr('width') <= 767)
+                    $("#navMenu").animate({
+                        height: 0
+                    }, 500);
+                $('#navMenu').attr('class', 'off');
+            });
+
+        }
+
+        $(document).ready(function () {
+            $('#navButton').click(function () {
+                navButton();
+            });
+            $('#book_body').css('display', 'none');
+            $('#research_body').css('display', 'none');
+            linking("test");
+            $('#main').css("font-weight","bold");
+
+        })
+    </script>
+</head>
+
+
+<body>
+    <div id="menu_body">
+        <h1 id="main_title">SeungHo's Web Page</h1>
+        <button id="navButton" class="modile"></button>
+        <div id="navMenu" class="off">
+            <ul id="navMenu_index">
+                <li id='main' class="nav_index">
+                    MAIN
+                </li>
+                <li id='book' class="nav_index">
+                    BOOK
+
+                </li>
+                <li id='research' class="nav_index">
+                    RESEARCH
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!---------------------------------------->
+    <div id="main_body">
+        <div id="profile_body">
+            <img id="my_img" src="SH_Ch.jpg">
+            <div id="profile_box">
+                <h2>최승호의 웹페이지에 오신 것을 환영합니다.</h2>
+                <p class="text">안녕하세요 현재 강원대학교 <a id="kangwon_computer"
+                        href="https://cse.kangwon.ac.kr/cse/index.do">컴퓨터
+                        정보통신 공학과</a>에 재학중인 최승호 라고 합니다. 과학을 좋아하며 취미는 독서 및 글쓰기 입니다.
+
+                </p>
+            </div>
+        </div>
+
+        <!---------------------------------------->
+        <div id="book_body">
+            <p>책 목록을 쫙 보여줄거야</p>
+            <table>
+                <tr class="book pl">
+                    <td class="book_info">
+                        <image class='book_info_img' width='40%'
+                            src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788996094050.jpg"></image>
+                        <div class="book_info_box">
+                            <p class="book_name"><a
+                                    href="https://product.kyobobook.co.kr/detail/S000001589148"><strong>제목</strong> :
+                                    윤성우의 열혈 C 프로그래밍</a></p>
+                            <p class="author">
+                                <stron>저자</stron> : 윤성우
+                            </p>
+                            <p class="publication"><strong>출판년도</strong> : 2010</p>
+                            <p class="comment">한줄평: 지금까지 컴퓨터 관련 활동을 할 수 있게 해준 입문서</p>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="book pl">
+                    <td class="book_info">
+                        <image class='book_info_img' width='40%'
+                            src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788979149135.jpg"></image>
+                        <div class="book_info_box">
+                            <p class="book_name"><a
+                                    href="https://product.kyobobook.co.kr/detail/S000001223830"><strong>제목</strong> : 뇌를
+                                    자극하는 C++ STL</a></p>
+                            <p class="author">
+                                <stron>저자</stron> : 공동환
+                            </p>
+                            <p class="publication"><strong>출판년도</strong> : 2012</p>
+                            <p class="comment">한줄평: C언어에서 C++로 넘어가고 싶다면 한 권쯤은 가지고 있어야할 책</p>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="book si_fi">
+                    <td class="book_info">
+                        <image class='book_info_img' width='40%'
+                            src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788925588711.jpg"></image>
+                        <div class="book_info_box">
+                            <p class="book_name"><a
+                                    href="https://product.kyobobook.co.kr/detail/S000003521296"><strong>제목</strong> :
+                                    Artemis</a></p>
+                            <p class="author">
+                                <stron>저자</stron> : 앤디 위어
+                            </p>
+                            <p class="publication"><strong>출판년도</strong> : 2018</p>
+                            <p class="comment">한줄평: 마션을 재밌게 읽었다면 이 작품 또한 재밌게 읽을 수 있을 것이다.</p>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="book si_fi">
+                    <td class="book_info">
+                        <image class='book_info_img' width='40%'
+                            src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788925588735.jpg"></image>
+                        <div class="book_info_box">
+                            <p class="book_name"><a href="co"><strong>제목</strong> : 프로젝트 헤일메리</a></p>
+                            <p class="author">
+                                <stron>저자</stron> : 앤디 위어
+                            </p>
+                            <p class="publication"><strong>출판년도</strong> : 2021</p>
+                            <p class="comment">한줄평: 프로젝트 헤일메리의 스릴감과 마션의 고독감이 적절하게 녹아든 작품</p>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="book novel">
+                    <td class="book_info">
+                        <image class='book_info_img' width='40%'
+                            src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788990982704.jpg"></image>
+                        <div class="book_info_box">
+                            <p class="book_name"><a
+                                    href="https://product.kyobobook.co.kr/detail/S000001461135"><strong>제목</strong> :
+                                    용의자 X의 헌신</a></p>
+                            <p class="author">
+                                <stron>저자</stron> : 히가시노 게이고
+                            </p>
+                            <p class="publication"><strong>출판년도</strong> : 2017</p>
+                            <p class="comment">한줄평: 많은 추리 소설들 중 가장 재밌게 읽었던 작품, 억지로 스토리를 전개해 나가는 느낌이 안듬</p>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="book pl">
+                    <td class="book_info">
+                        <image class='book_info_img' width='40%'
+                            src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791191043532.jpg"></image>
+                        <div class="book_info_box">
+                            <p class="book_name"><a
+                                    href="https://product.kyobobook.co.kr/detail/S000001947494"><strong>제목</strong> : 네가
+                                    마지막으로 남긴 노래</a></p>
+                            <p class="author">
+                                <stron>저자</stron> : 이치조 미사키
+                            </p>
+                            <p class="publication"><strong>출판년도</strong> : 2021</p>
+                            <p class="comment">한줄평: 내 고등학교 시절을, 로망을 떠올리게 해준 작품</p>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!---------------------------------------->
+        <div id="research_body">
+            <p>
+            <h1>과학실험</h1>
+            </p>
+            <table>
+                <tr>
+                    <td>
+                        <p>
+                        <h3>candy Rocket! in 2017</h3>
+                        </p>
+                        <video controls="controls" src="./candy.mp4" width="100%" muted="muted"></video>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>
+                        <h3>super Conductor! in 2017</h3>
+                        </p>
+                        <video controls="controls" src="./superconductor.mp4" width="100%" muted="muted"></video>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
