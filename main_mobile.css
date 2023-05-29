@@ -1,0 +1,72 @@
+
+
+#menu_body h1{
+    display: inline-block;
+  
+}
+#menu_body button{
+    float: right;
+    width: 100px;
+    height:100px;
+    font-size: 100%;
+}
+#nav_content{
+    display: block;
+
+}
+#navMenu{
+    height: 0;
+    overflow: hidden;
+    width: 100%;
+}
+#navMenu *{
+    margin: 0;
+    padding: 0;
+}
+#navMenu  li{
+    list-style: none;
+    text-align: center;
+    height: 80px;
+    font-size: 50px;
+    border : 1px solid black;
+}
+
+
+#nav_content *{
+    width: 100%;
+}
+#kangwon_computer{
+    text-decoration: none;
+}
+#my_img{
+    width : 100%;
+}
+
+.text {
+text-align: justify;
+font-size: 26px;
+font-weight: bold;
+}
+.book_info > * {
+    display: inline;
+    position: relative;
+    width:100%;
+}
+.book_info_img{
+    width : 40%;
+    left:30%;
+}
+.book_info_box{
+    text-align: center;
+}
+
+#book_body{
+    overflow: scroll;
+}
+.book_info_box{
+    font-size: 1.5em;
+}
+.book_info_box a{
+    text-decoration: none;
+    color:brown;
+}
