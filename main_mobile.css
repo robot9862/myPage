@@ -1,73 +1,88 @@
 
-
-#menu_body h1{
+#menu_body h1 {
     display: inline-block;
-  
+
 }
-#menu_body button{
-    display: ;
+
+#menu_body button {
+
     float: right;
-    width: 100px;
-    height:100px;
+    width: 60px;
+    height: 60px;
     font-size: 100%;
 }
-#nav_content{
+
+#main_title {
+    font-size: 100%;
+}
+
+#nav_content {
     display: block;
 
 }
-#navMenu{
+
+#navMenu {
     height: 0;
     overflow: hidden;
     width: 100%;
 }
-#navMenu *{
+
+#navMenu * {
     margin: 0;
     padding: 0;
 }
-#navMenu  li{
+
+#navMenu li {
     list-style: none;
     text-align: center;
     height: 80px;
     font-size: 50px;
-    border : 1px solid black;
+    border: 1px solid black;
 }
 
-
-#nav_content *{
+#nav_content * {
     width: 100%;
 }
-#kangwon_computer{
+
+#kangwon_computer {
     text-decoration: none;
 }
-#my_img{
-    width : 100%;
+
+#my_img {
+    width: 100%;
 }
 
 .text {
-text-align: justify;
-font-size: 26px;
-font-weight: bold;
+    text-align: justify;
+    font-size: 26px;
+    font-weight: bold;
 }
-.book_info > * {
+
+.book_info>* {
     display: inline;
     position: relative;
-    width:100%;
+    width: 100%;
 }
-.book_info_img{
-    width : 40%;
-    left:30%;
+
+.book_info_img {
+    width: 40%;
+    left: 30%;
 }
-.book_info_box{
+
+.book_info_box {
     text-align: center;
 }
 
-#book_body{
+#book_body {
+  
     overflow: scroll;
 }
-.book_info_box{
+
+.book_info_box {
     font-size: 1.5em;
 }
-.book_info_box a{
+
+.book_info_box a {
     text-decoration: none;
-    color:brown;
+    color: brown;
 }

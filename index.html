@@ -4,8 +4,10 @@
 <head>
 
     <title>SeungHo's Wep Page</title>
-    <link href="./main.css" rel="stylesheet" media="screen and (min-width: 768px)">
-    <link href="./main_mobile.css" rel="stylesheet" media="screen and (max-width: 767px)">
+    <meta name="viewport" content="user-scalable=yes, initial-scale=1">
+    <link media="screen and (max-width: 767px)" href="./main_mobile.css" rel="stylesheet" >
+    <link media="screen and (min-width: 768px)" href="./main.css" rel="stylesheet" >
+
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script>
         function navButton() {
@@ -40,7 +42,8 @@
                 $(this).css('fontWeight', 'bold')
                 $('#book').css('fontWeight', '');
                 $('#research').css('fontWeight', '');
-                if ($('menu_body').attr('width') <= 767)
+                console.log($('body').outerWidth(true));
+                if ($('body').outerWidth(true) <= 767)
                     $("#navMenu").animate({
                         height: 0
                     }, 500);
@@ -57,7 +60,8 @@
                 $(this).css('fontWeight', 'bold');
                 $('#main').css('fontWeight', '');
                 $('#research').css('fontWeight', '');
-                if ($('menu_body').attr('width') <= 767)
+                
+                if ($('body').outerWidth(true) <= 767)
                     $("#navMenu").animate({
                         height: 0
                     }, 500);
@@ -73,7 +77,8 @@
                 $(this).css('fontWeight', 'bold');
                 $('#main').css('fontWeight', '');
                 $('#book').css('fontWeight', '');
-                if ($('menu_body').attr('width') <= 767)
+               
+                if ($('body').outerWidth(true) <= 767)
                     $("#navMenu").animate({
                         height: 0
                     }, 500);
@@ -99,7 +104,7 @@
 <body>
     <div id="menu_body">
         <h1 id="main_title">SeungHo's Web Page</h1>
-        <button id="navButton" class="modile"></button>
+        <button id="navButton" class="modile">MENU</button>
         <div id="navMenu" class="off">
             <ul id="navMenu_index">
                 <li id='main' class="nav_index">
@@ -125,6 +130,7 @@
                 <p class="text">안녕하세요 현재 강원대학교 <a id="kangwon_computer"
                         href="https://cse.kangwon.ac.kr/cse/index.do">컴퓨터
                         정보통신 공학과</a>에 재학중인 최승호 라고 합니다. 과학을 좋아하며 취미는 독서 및 글쓰기 입니다.
+                        사용 가능한 언어는 C, C++, Java, Python, Scala이며 시스템 분야를 공부하고 있습니다.
 
                 </p>
             </div>
@@ -132,7 +138,7 @@
 
         <!---------------------------------------->
         <div id="book_body">
-            <p>책 목록을 쫙 보여줄거야</p>
+            <h2>SengHo가 추천하는 도서 목록!</h2>
             <table>
                 <tr class="book pl">
                     <td class="book_info">
@@ -235,7 +241,10 @@
         <div id="research_body">
             <p>
             <h1>과학실험</h1>
-            </p>
+             </p>
+
+            <h3>1. 2017년 교내 과학 행사 준비 주제인 캔디 로켓 연료 실험</h3>
+            
             <table>
                 <tr>
                     <td>
@@ -248,6 +257,7 @@
                 <tr>
                     <td>
                         <p>
+                        <h3>2. 2017년 수학 축전에서 초전도체를 소개하는 부스 운영 </h3>
                         <h3>super Conductor! in 2017</h3>
                         </p>
                         <video controls="controls" src="./superconductor.mp4" width="100%" muted="muted"></video>
